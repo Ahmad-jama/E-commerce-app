@@ -1,0 +1,87 @@
+.banner {
+  background-image: url("https://codewithsadee.github.io/anon-ecommerce-website/assets/images/banner-1.jpg");
+  background-size: cover;
+  background-position: right;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.banner_title {
+  margin: 2.5rem;
+  max-width: 400px;
+}
+
+.banner_title p:first-of-type {
+  color: var(--primary-color);
+  letter-spacing: 2px;
+  font-size: 1.7rem;
+}
+
+.banner_title h2 {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin: 10px 0;
+}
+
+.banner_title p {
+  font-size: 1.5rem;
+  color: #787878;
+}
+.banner_title p span {
+  font-size: 1.5rem;
+  color: #787878;
+}
+
+.banner_title a {
+  text-decoration: none;
+  background: var(--primary-color);
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  color: white;
+  display: block;
+  width: fit-content;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .banner {
+    margin-top: 1.5rem;
+    padding: 1rem;
+  }
+  .banner_title {
+    margin: 1rem;
+  }
+}
+@media (max-width: 772px) {
+  .banner_title {
+    max-width: 350px;
+  }
+  .banner_title p:first-of-type {
+    font-size: 1.3rem;
+  }
+
+  .banner_title h2 {
+    font-size: 2rem;
+  }
+
+  .banner_title p {
+    font-size: 1rem;
+  }
+  .banner_title p span {
+    font-size: 1.2rem;
+  }
+
+  .banner_title a {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 570px) {
+  .banner_title {
+    background-color: rgba(255, 255, 255, 0.68);
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 0.5rem;
+  }
+}
