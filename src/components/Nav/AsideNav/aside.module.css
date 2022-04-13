@@ -1,9 +1,9 @@
 .aside_nav {
   min-height: 100vh;
   background-color: white;
-  position: absolute;
+  position: fixed;
   top: 0;
-  z-index: 1001;
+  z-index: 10001;
   left: -400px;
   padding: 1rem;
   padding-right: 3rem;
@@ -25,7 +25,7 @@
   opacity: 0;
   z-index: -2;
   background-color: rgba(0, 0, 0, 0.385);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;

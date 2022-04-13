@@ -1,13 +1,18 @@
 import React from "react";
 
-import Aside from "../../components/HomeComponents/Aside/Aside";
-import Banner from "../../components/HomeComponents/Banner/Banner";
-import Category from "../../components/HomeComponents/Category/Category";
+import {
+  Banner,
+  Category,
+  ShowProducts,
+  Aside,
+} from "../../components/HomeComponents/";
+
 const Home = () => {
   return (
     <div className="container">
       <Banner />
       <Category />
+      <ShowProducts />
     </div>
   );
 };

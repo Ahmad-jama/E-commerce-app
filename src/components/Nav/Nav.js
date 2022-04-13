@@ -12,7 +12,6 @@ import MobileNav from "./nav-mobile/MobileNav";
 import AsideNav from "./AsideNav/AsideNav";
 const Nav = () => {
   const [showAside, setShowAside] = useState(false);
-  console.log(showAside);
   return (
     <div className={styles.nav_container}>
       <nav className={styles.top_nav}>

@@ -29,7 +29,6 @@
   padding: 1rem;
   display: flex;
   min-width: 270px;
-  height: 85px;
   scroll-snap-align: start;
 }
 

@@ -5,15 +5,6 @@ import styles from "./aside.module.css";
 
 const AsideNav = ({ setShowAside, showAside }) => {
   const [selectedAccordion, setSelectedAccordion] = useState(null);
-  console.log(showAside);
-
-  const toggleAccordion = (id) => {
-    if (id == selectedAccordion) {
-      setSelectedAccordion(null);
-    } else {
-      setSelectedAccordion(id);
-    }
-  };
 
   const AccordionContent = [
     { id: 1, accordion_name: "home" },
@@ -82,7 +73,7 @@ const AsideNav = ({ setShowAside, showAside }) => {
           return (
             <Accordion
               selectedAccordion={selectedAccordion}
-              toggleAccordion={toggleAccordion}
+              setSelectedAccordion={setSelectedAccordion}
               key={id}
               id={id}
               name={accordion_name}
