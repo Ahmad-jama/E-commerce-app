@@ -1,0 +1,92 @@
+.product {
+  border: 1px solid #ededed;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease-in-out;
+  position: relative;
+}
+
+.product:hover {
+  box-shadow: 0px 0px 5px #d5d5d5;
+}
+
+.product:hover .image_one {
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.8);
+}
+.product:hover .image_two {
+  position: relative;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.image_container {
+  position: relative;
+}
+
+.image_container .image_one {
+  position: relative;
+  opacity: 1;
+  transition: 0.4s ease-in-out;
+  transform: scale(1);
+}
+.image_container .image_two {
+  position: absolute;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+  transform: scale(0.8);
+}
+
+.content {
+}
+
+.content p:first-of-type {
+  font-family: system-ui, "Poppins";
+  color: #787878;
+}
+
+.ratings {
+  margin-top: 0.7rem;
+}
+
+.content {
+  padding: 15px 20px;
+}
+
+.content span {
+  font-family: sans-serif;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.content p span {
+  text-decoration: line-through;
+  color: hsl(0, 0%, 47%);
+  font-family: sans-serif;
+}
+
+.icon_box {
+  position: absolute;
+  top: 9px;
+  right: -36px;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  transition: 0.4s ease-in-out;
+}
+
+.product:hover .icon_box {
+  right: 6px;
+}
+
+.icon_box a,
+.icon_box span {
+  border: 1px solid #c6c6c6;
+  font-size: 1.2rem;
+  padding: 0.3rem;
+  display: flex;
+  border-radius: 4px;
+}
