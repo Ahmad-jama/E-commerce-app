@@ -1,70 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./box.module.css";
-const MInimalBox = () => {
+const MInimalBox = ({ title, productsData }) => {
   return (
     <div className={styles.box_showcase}>
-      <h2>new arival</h2>
-      <Link to={"/"} className={styles.box}>
-        <div>
-          <img
-            src="https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/clothes-1.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <h3>Girls Pnk Embro Design Top</h3>
-          <p>Clothes</p>
-          <p>
-            $61.00 <span> $9.00</span>
-          </p>
-        </div>
-      </Link>
-      <Link to={"/"} className={styles.box}>
-        <div>
-          <img
-            src="https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/clothes-1.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <h3>Girls Pnk Embro Design Top</h3>
-          <p>Clothes</p>
-          <p>
-            $61.00 <span> $9.00</span>
-          </p>
-        </div>
-      </Link>
-      <Link to={"/"} className={styles.box}>
-        <div>
-          <img
-            src="https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/clothes-1.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <h3>Girls Pnk Embro Design Top</h3>
-          <p>Clothes</p>
-          <p>
-            $61.00 <span> $9.00</span>
-          </p>
-        </div>
-      </Link>
-      <Link to={"/"} className={styles.box}>
-        <div>
-          <img
-            src="https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/clothes-1.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <h3>Girls Pnk Embro Design Top</h3>
-          <p>Clothes</p>
-          <p>
-            $61.00 <span> $9.00</span>
-          </p>
-        </div>
-      </Link>
+      <h2>{title}</h2>
+      {productsData.map((product) => {
+        const { id, name, category, oldPrice, newPrice, image } = product;
+
+        return (
+          <div key={id}>
+            <Link to={"/"} className={styles.box}>
+              <div>
+                <img src={image} alt="" />
+              </div>
+              <div>
+                <h3>{name}</h3>
+                <p>{category}</p>
+                <p>
+                  {oldPrice} <span>{newPrice}</span>
+                </p>
+              </div>
+            </Link>
+          </div>
+        );
+      })}
     </div>
   );
 };

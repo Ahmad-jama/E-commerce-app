@@ -55,7 +55,7 @@
   width: 70px;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1204px) and (min-width: 1024px) {
   .box {
     max-width: 245px;
     min-width: 100px;
