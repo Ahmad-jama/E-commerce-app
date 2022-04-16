@@ -4,7 +4,7 @@ import {
   Banner,
   Category,
   ShowProducts,
-  Aside,
+  Testimonials,
 } from "../../components/HomeComponents/";
 
 const Home = () => {
@@ -13,6 +13,7 @@ const Home = () => {
       <Banner />
       <Category />
       <ShowProducts />
+      <Testimonials />
     </div>
   );
 };

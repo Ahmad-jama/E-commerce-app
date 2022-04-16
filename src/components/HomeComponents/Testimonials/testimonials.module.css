@@ -1,0 +1,169 @@
+.testimonials {
+  display: flex;
+  margin-top: 3rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* the card */
+
+.testimonial_card {
+  flex: 1;
+}
+
+.testimonial_card h2 {
+  border-bottom: 1px solid rgb(223, 223, 223);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.testimonial_box {
+  border: 1px solid rgb(235, 235, 235);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.image_container {
+  border-radius: 50%;
+  padding: 4px;
+  display: flex;
+  border: 1px solid gray;
+  width: 75px;
+  margin: 0 auto 1rem;
+}
+
+.image_container img {
+  border-radius: 50%;
+}
+
+.testimonial_box h4 {
+  text-transform: uppercase;
+  color: #787878;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.testimonial_box p:first-of-type {
+  color: #454545;
+  font-weight: lighter;
+  margin-bottom: 16px;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.testimonial_box > img {
+  margin: auto;
+  margin-bottom: 10px;
+  width: 26px;
+  display: block;
+}
+
+.testimonial_box p:last-of-type {
+  max-width: 70%;
+  margin: auto;
+  color: #787878;
+  text-align: center;
+}
+
+/* end testimonial card */
+
+/* start cta section */
+
+.cta_container {
+  flex: 2;
+  background-image: url(https://codewithsadee.github.io/anon-ecommerce-website/assets/images/cta-banner.jpg);
+  background-size: cover;
+  background-position: right;
+}
+.cta_container div {
+  background: #ffffffb5;
+  width: fit-content;
+  padding: 2.5rem;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  border-radius: 11px;
+  transform: translate(-50%, -50%);
+}
+.cta_container div button {
+  background: black;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: auto;
+  font-size: 1rem;
+  display: block;
+}
+.cta_container div h3 {
+  color: #454545;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  margin: 0.5rem;
+}
+.cta_container div p {
+  color: #787878;
+  font-size: 1rem;
+  text-align: center;
+}
+.cta_container div span {
+  font-size: 1rem;
+  color: #787878;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  margin-top: 0.6rem;
+}
+
+/* end cta section */
+
+/* start service */
+
+.service {
+  border: 1px solid rgb(235, 235, 235);
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+
+  flex-direction: column;
+  gap: 1rem;
+}
+.service .service_box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.service_box svg {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+.service div span {
+  color: #787878;
+  font-size: 0.9rem;
+}
+
+/* end service */
+
+@media (max-width: 1200px) {
+  .service {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    flex-direction: row;
+  }
+  .cta_container {
+  }
+}
+@media (max-width: 1024px) {
+  .testimonials {
+    display: block;
+  }
+  .cta_container {
+    height: 500px;
+    margin: 1.5rem 0;
+  }
+}
