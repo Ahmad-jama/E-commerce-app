@@ -15,11 +15,11 @@ const productFeatured = () => {
         </div>
         <div className={styles.content}>
           <div className={styles.ratings}>
-            <AiOutlineStar />
-            <AiOutlineStar />
-            <AiOutlineStar />
-            <AiOutlineStar />
-            <AiOutlineStar />
+            <AiOutlineStar color="#f6a355" />
+            <AiOutlineStar color="#f6a355" />
+            <AiOutlineStar color="#f6a355" />
+            <AiOutlineStar color="#f6a355" />
+            <AiOutlineStar color="#f6a355" />
           </div>
           <h3> SHAMPOO, CONDITIONER & FACEWASH PACKS</h3>
           <p className={styles.description}>

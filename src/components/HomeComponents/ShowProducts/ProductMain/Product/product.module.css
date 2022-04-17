@@ -10,32 +10,24 @@
   box-shadow: 0px 0px 5px #d5d5d5;
 }
 
-.product:hover .image_one {
+.product:hover .image_one,
+.image_container .image_two {
   position: absolute;
   opacity: 0;
-  transform: scale(0.8);
+  transform: scale(0.5);
+  transition: 0.4s ease-in-out;
 }
-.product:hover .image_two {
+.product:hover .image_two,
+.image_container .image_one {
   position: relative;
+  transition: 0.4s ease-in-out;
+
   opacity: 1;
   transform: scale(1);
 }
 
 .image_container {
   position: relative;
-}
-
-.image_container .image_one {
-  position: relative;
-  opacity: 1;
-  transition: 0.4s ease-in-out;
-  transform: scale(1);
-}
-.image_container .image_two {
-  position: absolute;
-  opacity: 0;
-  transition: 0.4s ease-in-out;
-  transform: scale(0.8);
 }
 
 .content {

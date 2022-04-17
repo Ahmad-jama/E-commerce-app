@@ -20,6 +20,7 @@
 .sell_box {
   display: flex;
   gap: 10px;
+  margin: 1rem 0;
 }
 
 .sell_box div img {

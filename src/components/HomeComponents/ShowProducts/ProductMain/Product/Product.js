@@ -40,11 +40,11 @@ const Product = ({
         <span>{type}</span>
         <p> {title} </p>
         <div className={styles.ratings}>
-          <AiOutlineStar />
-          <AiOutlineStar />
-          <AiOutlineStar />
-          <AiOutlineStar />
-          <AiOutlineStar />
+          <AiOutlineStar color="#f6a355" />
+          <AiOutlineStar color="#f6a355" />
+          <AiOutlineStar color="#f6a355" />
+          <AiOutlineStar color="#f6a355" />
+          <AiOutlineStar color="#f6a355" />
         </div>
         <p>
           {newPrice} <span> {oldPrice} </span>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Accordion from "../../../Accordion/Accordion";
 import styles from "./sidebar.module.css";
-import { AiOutlineStar } from "react-icons/ai";
+import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
 const SidebarCategory = ({ setshowSidebar, showSidebar }) => {
@@ -127,11 +127,11 @@ const SidebarCategory = ({ setshowSidebar, showSidebar }) => {
               <div>
                 <p>{title.slice(0, 11)}..</p>
                 <div className="ratings">
-                  <AiOutlineStar />
-                  <AiOutlineStar />
-                  <AiOutlineStar />
-                  <AiOutlineStar />
-                  <AiOutlineStar />
+                  <AiFillStar color="#f6a355" />
+                  <AiFillStar color="#f6a355" />
+                  <AiFillStar color="#f6a355" />
+                  <AiOutlineStar color="#f6a355" />
+                  <AiOutlineStar color="#f6a355" />
                 </div>
                 <p>
                   {" "}
