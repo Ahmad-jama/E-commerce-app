@@ -8,9 +8,8 @@ const Modal = () => {
   const dispatch = useDispatch();
   return (
     <>
-      {/* <div className={`${styles.overlay}  `}></div>
-      <div className={`${styles.modal}  `}> */}
       <div
+        onClick={() => dispatch(hideModal())}
         className={`${styles.overlay} ${showModal && styles.show_overlay}`}
       ></div>
       <div className={`${styles.modal} ${showModal && styles.show_modal}`}>

@@ -3,8 +3,15 @@ import Nav from "./components/Nav/Nav";
 import { Home } from "./pages";
 import "./index.css";
 import Footer from "./components/Footer/Footer";
+import { useDispatch } from "react-redux";
+import { showModal } from "./features/modalSlice";
 
 function App() {
+  const dispatch = useDispatch();
+
+  setTimeout(() => {
+    dispatch(showModal());
+  }, 3000);
   return (
     <div className="app">
       <Nav />

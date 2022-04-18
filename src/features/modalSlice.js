@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  value: true,
+  value: false,
 };
 
 export const modalSlice = createSlice({
@@ -11,10 +11,13 @@ export const modalSlice = createSlice({
     hideModal: (state) => {
       state.value = false;
     },
+    showModal: (state) => {
+      state.value = true;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { hideModal } = modalSlice.actions;
+export const { hideModal, showModal } = modalSlice.actions;
 
 export default modalSlice.reducer;
