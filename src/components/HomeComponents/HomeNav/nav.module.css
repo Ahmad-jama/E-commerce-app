@@ -1,0 +1,40 @@
+nav {
+  border-bottom: 1px solid #d8d8d8;
+}
+.top_nav > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.top_nav li {
+  color: #787878;
+  font-size: 0.75rem;
+}
+
+.icons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icons > * {
+  background-color: #d8d8d8;
+  font-size: 1.5rem;
+  padding: 5px;
+  border-radius: 5px;
+  color: gray;
+  transition: 0.2s ease-in-out;
+}
+
+.icons > *:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .icons {
+    display: none;
+  }
+}

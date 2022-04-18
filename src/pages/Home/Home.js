@@ -1,22 +1,25 @@
 import React from "react";
-
 import {
   Banner,
   Category,
   ShowProducts,
   Testimonials,
   Modal,
+  HomeNav,
 } from "../../components/HomeComponents/";
 
 const Home = () => {
   return (
-    <div style={{ position: "relative" }} className="container">
-      <Banner />
-      <Category />
-      <ShowProducts />
-      <Testimonials />
-      <Modal />
-    </div>
+    <>
+      <HomeNav />
+      <div style={{ position: "relative" }} className="container">
+        <Banner />
+        <Category />
+        <ShowProducts />
+        <Testimonials />
+        <Modal />
+      </div>
+    </>
   );
 };
 

@@ -1,8 +1,9 @@
 nav {
   border-bottom: 1px solid #d8d8d8;
+  margin-bottom: 1rem;
 }
-.top_nav > div,
-.middle_nav > div {
+
+.nav > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,39 +11,7 @@ nav {
   padding-bottom: 1rem;
 }
 
-.top_nav li {
-  color: #787878;
-  font-size: 0.75rem;
-}
-
-.icons {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.icons > * {
-  background-color: #d8d8d8;
-  font-size: 1.5rem;
-  padding: 5px;
-  border-radius: 5px;
-  color: gray;
-  transition: 0.2s ease-in-out;
-}
-
-.icons > *:hover {
-  background-color: var(--primary-color);
-  color: white;
-}
-
-@media (max-width: 1024px) {
-  .icons {
-    display: none;
-  }
-}
-
-/* start seconde nav */
-
-.middle_nav h1 {
+.nav h1 {
   color: var(--primary-color);
 }
 
@@ -67,7 +36,7 @@ nav {
 }
 
 @media (max-width: 500px) {
-  .middle_nav > div {
+  .nav > div {
     gap: 1rem;
     display: grid;
     text-align: center;
@@ -87,19 +56,19 @@ nav {
   font-size: 1.5rem;
 }
 
-.middle_nav ul {
+.nav ul {
   font-size: 2rem;
   color: gray;
   gap: 1rem;
   display: flex;
 }
 
-.middle_nav ul a {
+.nav ul a {
   transition: 0.2s ease-in-out;
   position: relative;
 }
 
-.middle_nav ul span {
+.nav ul span {
   content: "1";
   width: 14px;
   height: 14px;
@@ -115,12 +84,12 @@ nav {
   font-weight: bold;
 }
 
-.middle_nav ul a:hover {
+.nav ul a:hover {
   color: var(--primary-color);
 }
 
 @media (max-width: 1024px) {
-  .middle_nav ul {
+  .nav ul {
     display: none;
   }
 }

@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { AiOutlineCloseCircle } from "react-icons/ai";
-import Accordion from "../../Accordion/Accordion";
+import Accordion from "../../../Accordion/Accordion";
 import styles from "./aside.module.css";
 
 import { useSelector, useDispatch } from "react-redux";
-import { hideNavSidebar } from "../../../features/navSidebar";
+import { hideNavSidebar } from "../../../../features/navSidebar";
 
 const AsideNav = () => {
   const [selectedAccordion, setSelectedAccordion] = useState(null);

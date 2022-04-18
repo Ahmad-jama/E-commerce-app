@@ -5,8 +5,8 @@ import { AiOutlineAppstore } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import styles from "./mobile.module.css";
 import { useSelector, useDispatch } from "react-redux";
-import { showNavSidebar } from "../../../features/navSidebar";
-import { showCategorySidebar } from "../../../features/categorySidebar";
+import { showNavSidebar } from "../../../../features/navSidebar";
+import { showCategorySidebar } from "../../../../features/categorySidebar";
 
 const MobileNav = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
