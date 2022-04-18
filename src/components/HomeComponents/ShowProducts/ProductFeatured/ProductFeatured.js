@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./featured.module.css";
 import { AiOutlineStar } from "react-icons/ai";
 
-const productFeatured = () => {
+const ProductFeatured = () => {
   return (
     <div className={styles.productbox}>
       <h2>Deal Of The Day</h2>
@@ -29,7 +29,7 @@ const productFeatured = () => {
           <p className={styles.prices}>
             $150.00 <span> $180.00 </span>
           </p>
-          <button>ADD TO CART</button>
+          <button onClick={() => console.log("good lock")}>ADD TO CART</button>
           <div className={styles.count_sold}>
             <p>
               <span>already sold</span> :20
@@ -64,4 +64,4 @@ const productFeatured = () => {
   );
 };
 
-export default productFeatured;
+export default ProductFeatured;

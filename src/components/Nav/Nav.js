@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styles from "./nav.module.css";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import {
@@ -10,8 +9,10 @@ import { Link } from "react-router-dom";
 import DescktopNav from "./nav-desctop/Nav";
 import MobileNav from "./nav-mobile/MobileNav";
 import AsideNav from "./AsideNav/AsideNav";
+import { useSelector } from "react-redux";
 const Nav = () => {
-  const [showAside, setShowAside] = useState(false);
+  const cartItems = useSelector((state) => state.cart.cartItems);
+
   return (
     <div className={styles.nav_container}>
       <nav className={styles.top_nav}>
@@ -34,7 +35,9 @@ const Nav = () => {
       </nav>
       <nav className={styles.middle_nav}>
         <div className="container">
-          <h1>E-Shope</h1>
+          <h1>
+            <Link to={"/"}>E-Shope</Link>
+          </h1>
           <div className={styles.search_bar}>
             <input type="text" placeholder="Enter your project name" />
             <button>
@@ -44,6 +47,7 @@ const Nav = () => {
           <ul>
             <Link to={"/"}>
               <IoBagHandleOutline />
+              <span> {cartItems.length || 0} </span>
             </Link>
             <Link to={"/"}>
               <IoPersonOutline />
@@ -52,8 +56,8 @@ const Nav = () => {
         </div>
       </nav>
       <DescktopNav />
-      <AsideNav showAside={showAside} setShowAside={setShowAside} />
-      <MobileNav setShowAside={setShowAside} />
+      <AsideNav />
+      <MobileNav />
     </div>
   );
 };

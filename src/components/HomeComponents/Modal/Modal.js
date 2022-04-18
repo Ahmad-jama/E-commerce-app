@@ -1,14 +1,20 @@
 import React from "react";
 import styles from "./modal.module.css";
 import { IoCloseOutline } from "react-icons/io5";
+import { useSelector, useDispatch } from "react-redux";
+import { hideModal } from "../../../features/modalSlice";
 const Modal = () => {
+  const showModal = useSelector((state) => state.modal.value);
+  const dispatch = useDispatch();
   return (
     <>
       {/* <div className={`${styles.overlay}  `}></div>
       <div className={`${styles.modal}  `}> */}
-      <div className={`${styles.overlay} ${styles.show_overlay}`}></div>
-      <div className={`${styles.modal} ${styles.show_modal}`}>
-        <div className={styles.icon}>
+      <div
+        className={`${styles.overlay} ${showModal && styles.show_overlay}`}
+      ></div>
+      <div className={`${styles.modal} ${showModal && styles.show_modal}`}>
+        <div className={styles.icon} onClick={() => dispatch(hideModal())}>
           <IoCloseOutline />
         </div>
         <div className={styles.image_container}>

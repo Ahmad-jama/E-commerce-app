@@ -3,9 +3,13 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 import Accordion from "../../Accordion/Accordion";
 import styles from "./aside.module.css";
 
-const AsideNav = ({ setShowAside, showAside }) => {
-  const [selectedAccordion, setSelectedAccordion] = useState(null);
+import { useSelector, useDispatch } from "react-redux";
+import { hideNavSidebar } from "../../../features/navSidebar";
 
+const AsideNav = () => {
+  const [selectedAccordion, setSelectedAccordion] = useState(null);
+  const navsidebar = useSelector((state) => state.navsidebar.value);
+  const dispatch = useDispatch();
   const AccordionContent = [
     { id: 1, accordion_name: "home" },
     {
@@ -50,19 +54,19 @@ const AsideNav = ({ setShowAside, showAside }) => {
   return (
     <div>
       <div
-        className={`${styles.overlay} ${showAside ? styles.show_overlay : ""}`}
-        onClick={() => setShowAside(false)}
+        className={`${styles.overlay} ${navsidebar ? styles.show_overlay : ""}`}
+        onClick={() => dispatch(hideNavSidebar())}
       ></div>
 
       <aside
-        className={`${styles.aside_nav} ${showAside ? styles.show_aside : ""}`}
+        className={`${styles.aside_nav} ${navsidebar ? styles.show_aside : ""}`}
       >
         <div className={styles.aside_tilte}>
           <h2>menu</h2>
           <button>
             <AiOutlineCloseCircle
               onClick={() => {
-                setShowAside(false);
+                dispatch(hideNavSidebar());
               }}
             />
           </button>

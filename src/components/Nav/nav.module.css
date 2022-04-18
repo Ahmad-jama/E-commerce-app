@@ -43,6 +43,7 @@ nav {
 /* start seconde nav */
 
 .middle_nav h1 {
+  color: var(--primary-color);
 }
 
 .search_bar {
@@ -98,7 +99,7 @@ nav {
   position: relative;
 }
 
-.middle_nav ul a:first-of-type::before {
+.middle_nav ul span {
   content: "1";
   width: 14px;
   height: 14px;

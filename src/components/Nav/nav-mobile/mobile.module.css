@@ -28,7 +28,7 @@
   color: var(--primary-color);
 }
 
-.Nav_icons a.bag::before {
+.Nav_icons span {
   content: "3";
   width: 14px;
   height: 14px;

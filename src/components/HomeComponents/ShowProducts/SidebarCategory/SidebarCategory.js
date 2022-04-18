@@ -3,9 +3,12 @@ import Accordion from "../../../Accordion/Accordion";
 import styles from "./sidebar.module.css";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import { AiOutlineCloseCircle } from "react-icons/ai";
-
-const SidebarCategory = ({ setshowSidebar, showSidebar }) => {
+import { useSelector, useDispatch } from "react-redux";
+import { hideCategorySidebar } from "../../../../features/categorySidebar";
+const SidebarCategory = () => {
   const [selectedAccordion, setSelectedAccordion] = useState(null);
+  const categorySidebar = useSelector((state) => state.categorySidebar.value);
+  const dispatch = useDispatch();
 
   const AccordionContent = [
     {
@@ -93,8 +96,10 @@ const SidebarCategory = ({ setshowSidebar, showSidebar }) => {
       <div className={styles.category}>
         <div>
           <h3>CATEGORY</h3>
-          {showSidebar ? (
-            <AiOutlineCloseCircle onClick={() => setshowSidebar(false)} />
+          {categorySidebar ? (
+            <AiOutlineCloseCircle
+              onClick={() => dispatch(hideCategorySidebar())}
+            />
           ) : null}{" "}
         </div>
         {AccordionContent.map((accordion) => {

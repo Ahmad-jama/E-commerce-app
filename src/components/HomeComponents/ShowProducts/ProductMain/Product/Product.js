@@ -8,6 +8,8 @@ import {
 } from "react-icons/ai";
 import { IoBagAddOutline } from "react-icons/io5";
 import styles from "./product.module.css";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../../../../features/cart";
 const Product = ({
   id,
   title,
@@ -19,6 +21,7 @@ const Product = ({
   imageTwo,
 }) => {
   const [like, setlike] = useState(true);
+  const dispatch = useDispatch();
   return (
     <Link to={"/"} className={styles.product}>
       <div className={styles.image_container}>
@@ -32,9 +35,24 @@ const Product = ({
         <span onClick={() => setlike(!like)}>
           {like ? <AiOutlineHeart /> : <AiTwotoneHeart />}
         </span>{" "}
-        <Link to={"/"}>
+        <span
+          onClick={() =>
+            dispatch(
+              addToCart({
+                id,
+                title,
+                type,
+                oldPrice,
+                newPrice,
+                ratings,
+                imageOne,
+                imageTwo,
+              })
+            )
+          }
+        >
           <IoBagAddOutline />
-        </Link>{" "}
+        </span>
       </div>
       <div className={styles.content}>
         <span>{type}</span>
