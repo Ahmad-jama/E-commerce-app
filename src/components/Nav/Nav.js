@@ -23,7 +23,7 @@ const Nav = () => {
             </button>
           </div>
           <ul>
-            <Link to={"/"}>
+            <Link to={"/cart"}>
               <IoBagHandleOutline />
               <span> {cartItems.length || 0} </span>
             </Link>

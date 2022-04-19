@@ -54,7 +54,7 @@
   .Nav_icons {
     width: 100%;
   }
-  button {
+  .Nav_icons button {
     font-size: 1.5rem;
   }
 }

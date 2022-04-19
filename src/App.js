@@ -7,6 +7,10 @@ import { useDispatch } from "react-redux";
 import Nav from "./components/Nav/Nav";
 import { showModal } from "./features/modalSlice";
 import SingleProductPage from "./pages/SingleProductPage/SingleProductPage";
+import Cart from "./pages/Cart/Cart";
+
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const dispatch = useDispatch();
@@ -16,8 +20,10 @@ function App() {
   }, 3000);
   return (
     <div className="app">
+      <ToastContainer />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/cart" element={<Cart />} />
         <Route
           path="/product/:id"
           element={

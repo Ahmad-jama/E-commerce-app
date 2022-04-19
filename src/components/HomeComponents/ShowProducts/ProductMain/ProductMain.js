@@ -10,6 +10,7 @@ const productMain = () => {
       oldPrice: "$32.00",
       newPrice: "$45.00",
       ratings: "3",
+      quantity: 1,
       imageOne:
         "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/jacket-4.jpg",
       imageTwo:
@@ -22,6 +23,7 @@ const productMain = () => {
       oldPrice: "$326.00",
       newPrice: "$445.00",
       ratings: "3",
+      quantity: 1,
 
       imageOne:
         "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/shirt-2.jpg",
@@ -35,6 +37,8 @@ const productMain = () => {
       oldPrice: "$102.00",
       newPrice: "$153.00",
       ratings: "3",
+      quantity: 1,
+
       imageOne:
         "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/jacket-6.jpg",
       imageTwo:
@@ -48,6 +52,8 @@ const productMain = () => {
       oldPrice: "$32.00",
       newPrice: "$45.00",
       ratings: "3",
+      quantity: 1,
+
       imageOne:
         "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/clothes-4.jpg",
       imageTwo:
@@ -60,6 +66,8 @@ const productMain = () => {
       oldPrice: "$302.00",
       newPrice: "$450.00",
       ratings: "3",
+      quantity: 1,
+
       imageOne:
         "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/shoe-2_1.jpg",
       imageTwo:
@@ -71,6 +79,8 @@ const productMain = () => {
       type: "WATCHES",
       oldPrice: "$32.00",
       newPrice: "$45.00",
+      quantity: 1,
+
       ratings: "3",
       imageOne:
         "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/watch-4.jpg",
@@ -81,6 +91,8 @@ const productMain = () => {
       id: 7,
       title: "  Womens Party Wear Shoes",
       type: "PARTY WEAR",
+      quantity: 1,
+
       oldPrice: "$32.00",
       newPrice: "$45.00",
       ratings: "3",
@@ -94,6 +106,8 @@ const productMain = () => {
       title: " Better Basics French Terry Sweatshorts",
       type: "SHORTS",
       oldPrice: "$32.00",
+      quantity: 1,
+
       newPrice: "$45.00",
       ratings: "3",
 
@@ -117,6 +131,7 @@ const productMain = () => {
             newPrice,
             ratings,
             imageOne,
+            quantity,
             imageTwo,
           } = product;
           return (
@@ -130,6 +145,7 @@ const productMain = () => {
               newPrice={newPrice}
               imageOne={imageOne}
               imageTwo={imageTwo}
+              quantity={quantity}
             />
           );
         })}

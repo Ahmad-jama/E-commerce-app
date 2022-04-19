@@ -25,7 +25,7 @@ const MobileNav = () => {
         <AiOutlineAppstore />
       </button>
 
-      <Link to={"/"} className={styles.bag}>
+      <Link to={"/cart"} className={styles.bag}>
         <IoBagHandleOutline />
         <span> {cartItems.length || 0} </span>
       </Link>

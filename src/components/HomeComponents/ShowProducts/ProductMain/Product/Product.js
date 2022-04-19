@@ -19,8 +19,10 @@ const Product = ({
   ratings,
   imageOne,
   imageTwo,
+  quantity,
 }) => {
   const [like, setlike] = useState(true);
+
   const dispatch = useDispatch();
   return (
     <Link to={"/"} className={styles.product}>
@@ -36,7 +38,7 @@ const Product = ({
           {like ? <AiOutlineHeart /> : <AiTwotoneHeart />}
         </span>{" "}
         <span
-          onClick={() =>
+          onClick={() => {
             dispatch(
               addToCart({
                 id,
@@ -46,10 +48,11 @@ const Product = ({
                 newPrice,
                 ratings,
                 imageOne,
+                quantity,
                 imageTwo,
               })
-            )
-          }
+            );
+          }}
         >
           <IoBagAddOutline />
         </span>
