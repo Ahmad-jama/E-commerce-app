@@ -16,7 +16,7 @@ const Cart = () => {
   useEffect(() => {
     dispatch(getTotal());
   }, [cart]);
-  if (cart == false) {
+  if (cart.cartItems == false) {
     return (
       <>
         <Nav />
