@@ -20,7 +20,6 @@
   max-width: 750px;
   width: fit-content;
   overflow: hidden;
-  margin: 1rem;
   opacity: 0;
   z-index: -1;
   transform: translate(-50%, -50%) scale(0.5);
@@ -62,6 +61,13 @@
   .content {
     padding: 3rem;
     max-width: 400px;
+  }
+}
+
+@media (max-width: 400px) {
+  .content {
+    padding: 1rem;
+    max-width: 350px;
   }
 }
 
@@ -115,4 +121,21 @@
   font-weight: bolder;
   padding: 4px;
   font-size: 1.3rem;
+}
+
+@media (max-width: 300px) {
+  .modal {
+    left: 40%;
+    width: 250px;
+  }
+
+  .content h4 {
+    font-size: 1rem;
+  }
+  .content button,
+  .content input,
+  .content p,
+  .icon {
+    font-size: 0.7rem;
+  }
 }

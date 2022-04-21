@@ -7,8 +7,8 @@ const productMain = () => {
       id: 1,
       title: "Mens Winter Leathers Jackets",
       type: "jaket",
-      oldPrice: "$32.00",
-      newPrice: "$45.00",
+      oldPrice: 32.0,
+      newPrice: 45.0,
       ratings: "3",
       quantity: 1,
       imageOne:
@@ -20,8 +20,8 @@ const productMain = () => {
       id: 2,
       title: "Pure Garment Dyed Cotton Shirt",
       type: "SHIRT",
-      oldPrice: "$326.00",
-      newPrice: "$445.00",
+      oldPrice: 326.0,
+      newPrice: 445.0,
       ratings: "3",
       quantity: 1,
 
@@ -34,8 +34,8 @@ const productMain = () => {
       id: 3,
       title: "MEN Yarn Fleece Full-Zip Jacket ",
       type: "jaket",
-      oldPrice: "$102.00",
-      newPrice: "$153.00",
+      oldPrice: 102.0,
+      newPrice: 153.0,
       ratings: "3",
       quantity: 1,
 
@@ -49,8 +49,8 @@ const productMain = () => {
 
       title: "Black Floral Wrap Midi Skirt",
       type: "skirt",
-      oldPrice: "$32.00",
-      newPrice: "$45.00",
+      oldPrice: 32.0,
+      newPrice: 45.0,
       ratings: "3",
       quantity: 1,
 
@@ -63,8 +63,8 @@ const productMain = () => {
       id: 5,
       title: "Casual Men's Brown Shoes",
       type: "CASUAL",
-      oldPrice: "$302.00",
-      newPrice: "$450.00",
+      oldPrice: 302.0,
+      newPrice: 450.0,
       ratings: "3",
       quantity: 1,
 
@@ -77,8 +77,8 @@ const productMain = () => {
       id: 6,
       title: " Pocket Watch Leather Pouch",
       type: "WATCHES",
-      oldPrice: "$32.00",
-      newPrice: "$45.00",
+      oldPrice: 32.0,
+      newPrice: 45.0,
       quantity: 1,
 
       ratings: "3",
@@ -93,8 +93,8 @@ const productMain = () => {
       type: "PARTY WEAR",
       quantity: 1,
 
-      oldPrice: "$32.00",
-      newPrice: "$45.00",
+      oldPrice: 32.0,
+      newPrice: 45.0,
       ratings: "3",
       imageOne:
         "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/party-wear-2.jpg",
@@ -105,10 +105,10 @@ const productMain = () => {
       id: 8,
       title: " Better Basics French Terry Sweatshorts",
       type: "SHORTS",
-      oldPrice: "$32.00",
+      oldPrice: 32.0,
       quantity: 1,
 
-      newPrice: "$45.00",
+      newPrice: 45.0,
       ratings: "3",
 
       imageOne:

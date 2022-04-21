@@ -23,6 +23,7 @@ function App() {
       <ToastContainer />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/checkout" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
         <Route
           path="/product/:id"

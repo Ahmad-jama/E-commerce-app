@@ -1,12 +1,22 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import Nav from "../../components/Nav/Nav";
 import styles from "./cart.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { removeFromCart } from "../../features/cart";
+import { Link } from "react-router-dom";
+import {
+  removeFromCart,
+  incressQuantity,
+  decressQuantity,
+  getTotal,
+} from "../../features/cart";
+import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 const Cart = () => {
-  const products = useSelector((state) => state.cart.cartItems);
+  const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-  if (products == false) {
+  useEffect(() => {
+    dispatch(getTotal());
+  }, [cart]);
+  if (cart == false) {
     return (
       <>
         <Nav />
@@ -23,6 +33,7 @@ const Cart = () => {
       </>
     );
   }
+
   return (
     <div>
       <Nav />
@@ -33,7 +44,7 @@ const Cart = () => {
             <p>Quantity</p>
             <p>Total Price</p>
           </div>
-          {products.map((product) => {
+          {cart.cartItems.map((product) => {
             const { id, imageOne, newPrice, title, quantity } = product;
             return (
               <div key={id} className={styles.cart_items}>
@@ -48,68 +59,32 @@ const Cart = () => {
                     </button>
                   </div>
                 </div>
-                <div> {quantity} </div>
-                <div>$494</div>
+                <div className={styles.quantity}>
+                  <button
+                    onClick={() => {
+                      dispatch(incressQuantity(product));
+                    }}
+                  >
+                    <AiOutlineArrowLeft />
+                  </button>{" "}
+                  <p>{quantity}</p>{" "}
+                  <button
+                    onClick={() => {
+                      dispatch(decressQuantity(product));
+                    }}
+                  >
+                    <AiOutlineArrowRight />
+                  </button>{" "}
+                </div>
+                <div>${newPrice * quantity} </div>
               </div>
             );
           })}
 
-          {/* <div className={styles.cart_items}>
-            <div className={styles.content}>
-              <div>
-                <img
-                  src="https://s3.envato.com/files/182066829/icon.png  "
-                  alt=""
-                />
-              </div>
-              <div>
-                <h3>red prowd shirt-1</h3>
-                <p>Price : 299$</p>
-                <button>remove</button>
-              </div>
-            </div>
-            <div>1</div>
-            <div>$494</div>
-          </div>
-          <div className={styles.cart_items}>
-            <div className={styles.content}>
-              <div>
-                <img
-                  src="https://s3.envato.com/files/182066829/icon.png  "
-                  alt=""
-                />
-              </div>
-              <div>
-                <h3>red prowd shirt-1</h3>
-                <p>Price : 299$</p>
-                <button>remove</button>
-              </div>
-            </div>
-            <div>1</div>
-            <div>$494</div>
-          </div>
-          <div className={styles.cart_items}>
-            <div className={styles.content}>
-              <div>
-                <img
-                  src="https://s3.envato.com/files/182066829/icon.png  "
-                  alt=""
-                />
-              </div>
-              <div>
-                <h3>red prowd shirt-1</h3>
-                <p>Price : 299$</p>
-                <button>remove</button>
-              </div>
-            </div>
-            <div>1</div>
-            <div>$494</div>
-          </div> */}
-
           <div className={styles.total}>
             <div>
               <p>Suptotoal</p>
-              <p>$303.00</p>
+              <p>${cart.totalAmount}.00</p>
             </div>
             <div>
               <p>Tax</p>
@@ -117,10 +92,10 @@ const Cart = () => {
             </div>
             <div>
               <p>Total</p>
-              <p>$333.00</p>
+              <p>${cart.totalAmount + 30}.00</p>
             </div>
 
-            <button>Proceed to checkout</button>
+            <Link to={"/checkout"}>Proceed to checkout</Link>
           </div>
         </div>
       </div>
@@ -129,19 +104,3 @@ const Cart = () => {
 };
 
 export default Cart;
-
-{
-  /* <div className={styles.content}>
-<div>
-  <img
-    src="https://s3.envato.com/files/182066829/icon.png  "
-    alt=""
-  />
-</div>
-<div>
-  <h3>red prowd shirt-1</h3>
-  <p>Price : 299$</p>
-  <button>remove</button>
-</div>
-</div> */
-}

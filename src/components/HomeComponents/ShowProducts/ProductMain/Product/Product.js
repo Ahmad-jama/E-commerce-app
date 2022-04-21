@@ -68,7 +68,7 @@ const Product = ({
           <AiOutlineStar color="#f6a355" />
         </div>
         <p>
-          {newPrice} <span> {oldPrice} </span>
+          ${newPrice} <span> ${oldPrice} </span>
         </p>
       </div>
     </Link>
