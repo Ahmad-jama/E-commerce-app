@@ -51,6 +51,8 @@
 .quantity {
   display: flex;
   align-items: center;
+  height: 30px;
+  overflow: hidden;
 }
 
 .quantity p {
@@ -62,9 +64,6 @@
   height: fit-content;
   padding: 8px 10px;
   border: none;
-}
-
-.quantity svg {
 }
 
 @media (max-width: 600px) {

@@ -1,16 +1,12 @@
 import { Routes, Route } from "react-router-dom";
-
-import { Home } from "./pages";
-import "./index.css";
+import { Home, SingleProductPage, Cart, Checkout } from "./pages";
 import Footer from "./components/Footer/Footer";
-import { useDispatch } from "react-redux";
 import Nav from "./components/Nav/Nav";
+import { useDispatch } from "react-redux";
 import { showModal } from "./features/modalSlice";
-import SingleProductPage from "./pages/SingleProductPage/SingleProductPage";
-import Cart from "./pages/Cart/Cart";
-
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./index.css";
 
 function App() {
   const dispatch = useDispatch();
@@ -23,14 +19,23 @@ function App() {
       <ToastContainer />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/checkout" element={<Home />} />
-        <Route path="/cart" element={<Cart />} />
+
         <Route
           path="/product/:id"
           element={
             <>
               <Nav />
               <SingleProductPage />
+            </>
+          }
+        />
+        <Route path="/cart" element={<Cart />} />
+        <Route
+          path="/checkout"
+          element={
+            <>
+              <Nav />
+              <Checkout />
             </>
           }
         />

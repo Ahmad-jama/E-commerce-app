@@ -9,7 +9,7 @@ import {
   decressQuantity,
   getTotal,
 } from "../../features/cart";
-import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
@@ -65,7 +65,7 @@ const Cart = () => {
                       dispatch(incressQuantity(product));
                     }}
                   >
-                    <AiOutlineArrowLeft />
+                    <AiOutlinePlus />
                   </button>{" "}
                   <p>{quantity}</p>{" "}
                   <button
@@ -73,7 +73,7 @@ const Cart = () => {
                       dispatch(decressQuantity(product));
                     }}
                   >
-                    <AiOutlineArrowRight />
+                    <AiOutlineMinus />
                   </button>{" "}
                 </div>
                 <div>${newPrice * quantity} </div>
