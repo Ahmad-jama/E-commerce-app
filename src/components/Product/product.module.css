@@ -31,6 +31,7 @@
 }
 
 .content {
+  display: inline-block;
 }
 
 .content p:first-of-type {

@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { Home, SingleProductPage, Cart, Checkout } from "./pages";
+import { Home, SingleProductPage, Cart, Checkout, AllProducts } from "./pages";
 import Footer from "./components/Footer/Footer";
 import Nav from "./components/Nav/Nav";
 import { useDispatch } from "react-redux";
@@ -20,25 +20,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
 
-        <Route
-          path="/product/:id"
-          element={
-            <>
-              <Nav />
-              <SingleProductPage />
-            </>
-          }
-        />
+        <Route path="/Allproduct" element={<AllProducts />} />
+        <Route path="/product/:id" element={<SingleProductPage />} />
         <Route path="/cart" element={<Cart />} />
-        <Route
-          path="/checkout"
-          element={
-            <>
-              <Nav />
-              <Checkout />
-            </>
-          }
-        />
+        <Route path="/checkout" element={<Checkout />} />
+
         <Route e path="*" element={<h1>i am the erorr page</h1>} />
       </Routes>
       <Footer />

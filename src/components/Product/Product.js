@@ -9,7 +9,7 @@ import {
 import { IoBagAddOutline } from "react-icons/io5";
 import styles from "./product.module.css";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../../../../features/cart";
+import { addToCart } from "../../features/cart";
 const Product = ({
   id,
   title,
@@ -25,11 +25,11 @@ const Product = ({
 
   const dispatch = useDispatch();
   return (
-    <Link to={"/"} className={styles.product}>
-      <div className={styles.image_container}>
+    <div className={styles.product}>
+      <Link to={"/"} className={styles.image_container}>
         <img src={imageOne} alt={title} className={styles.image_one} />
         <img src={imageTwo} alt={title} className={styles.image_two} />
-      </div>
+      </Link>
       <div className={styles.icon_box}>
         <Link to={"/"}>
           <AiOutlineEye />
@@ -57,7 +57,7 @@ const Product = ({
           <IoBagAddOutline />
         </span>
       </div>
-      <div className={styles.content}>
+      <Link to={"/"} className={styles.content}>
         <span>{type}</span>
         <p> {title} </p>
         <div className={styles.ratings}>
@@ -70,8 +70,8 @@ const Product = ({
         <p>
           ${newPrice} <span> ${oldPrice} </span>
         </p>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };
 
