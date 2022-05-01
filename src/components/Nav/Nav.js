@@ -6,14 +6,18 @@ import {
 } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import styles from "./nav.module.css";
+import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getFilterdProduct } from "../../features/searchSllice";
 const Nav = () => {
   const cartItems = useSelector((store) => store.cart.cartItems);
   const [search, setSearch] = React.useState("");
   const dispatch = useDispatch();
+  let navigate = useNavigate();
+
   const handlekeyDown = (searchTerm) => {
     dispatch(getFilterdProduct(searchTerm));
+    navigate("/allproduct");
   };
 
   return (
@@ -39,7 +43,7 @@ const Nav = () => {
             />
             <button
               onClick={() => {
-                dispatch(getFilterdProduct(search));
+                handlekeyDown(search);
               }}
             >
               <IoSearchOutline />

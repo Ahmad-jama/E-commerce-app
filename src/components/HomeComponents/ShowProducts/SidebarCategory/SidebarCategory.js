@@ -13,41 +13,31 @@ const SidebarCategory = () => {
   const AccordionContent = [
     {
       id: 1,
-      accordion_name: "men's",
+      accordion_name: "Clothes ",
       accordion_itmes: ["shirt", "shorts $ jeans", "sagety shoes", "wallet"],
       image:
         "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/dress.svg",
     },
     {
       id: 2,
-      accordion_name: "men's",
-      accordion_itmes: ["shirt", "shorts $ jeans", "sagety shoes", "wallet"],
+      accordion_name: "Footwear ",
+      accordion_itmes: ["Sports", "Formal", "Casual", "Safety Shoes"],
       image:
-        "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/dress.svg",
+        "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/shoes.svg",
     },
     {
       id: 3,
-      accordion_name: "Women's",
-      accordion_itmes: [
-        "Dress & Frock",
-        "Earrings",
-        "  Necklace",
-        "Makeup Kit",
-      ],
+      accordion_name: "Jewelry",
+      accordion_itmes: ["Earrings", "Couple Rings", "Necklace"],
       image:
-        "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/dress.svg",
+        "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/jewelry.svg",
     },
     {
       id: 4,
       accordion_name: "jewelry",
-      accordion_itmes: [
-        "Earrings",
-        " Couple Rings  ",
-        "Necklace  ",
-        "Bracelets",
-      ],
+      accordion_itmes: ["Shampoo", " Sunscreen", "Body Wash  ", "Makeup Kit"],
       image:
-        "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/dress.svg",
+        "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/cosmetics.svg",
     },
     {
       id: 5,
@@ -55,17 +45,17 @@ const SidebarCategory = () => {
       accordion_itmes: [
         "Clothes Perfume",
         " Deodorant",
-        "Flower Fragrance  ",
+        "Jacket",
         "Air Freshener",
       ],
       image:
-        "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/dress.svg",
+        "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/perfume.svg",
     },
   ];
   const betsSellersInfo = [
     {
       id: 1,
-      title: "Baby Fabric Shoes",
+      title: "men's hoodies t-shirt Men's Hoodies T-Shirt",
       ratings: 3,
       oldPrice: "$17.00",
       discountPrice: "$7.00",
@@ -76,19 +66,19 @@ const SidebarCategory = () => {
       id: 2,
       title: "Baby Fabric Shoes",
       ratings: 3,
-      oldPrice: "$17.00",
-      discountPrice: "$7.00",
+      oldPrice: "$102.00",
+      discountPrice: "$27.00",
       image:
-        "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/1.jpg",
+        "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/2.jpg",
     },
     {
       id: 3,
-      title: "Baby Fabric Shoes",
+      title: "Woolen Hat For Men",
       ratings: 3,
-      oldPrice: "$17.00",
-      discountPrice: "$7.00",
+      oldPrice: "$132.00",
+      discountPrice: "$78.00",
       image:
-        "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/1.jpg",
+        "https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/4.jpg",
     },
   ];
   return (
