@@ -1,15 +1,38 @@
-import React from "react";
+import { useEffect } from "react";
 import { AiOutlineStar } from "react-icons/ai";
 import styles from "./singleproduct.module.css";
+import { useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { getSingleProduct } from "../../features/loadSingleProductSlice";
+import { addToCart } from "../../features/cartSlice";
 const SingleProductPage = () => {
+  const product = useSelector((store) => store.loadSingleProduct.product);
+  const { id } = useParams();
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    if (id) {
+      dispatch(getSingleProduct(id));
+    } else {
+      dispatch(getSingleProduct(1));
+    }
+  }, []);
+
+  const { category, imageOne, newPrice, oldPrice, quantity, ratings, title } =
+    product;
+
   return (
-    <div className="container">
+    <div
+      className="container"
+      style={{
+        height: `${id ? "100vh" : null}`,
+        display: "grid",
+        placeContent: "center",
+      }}
+    >
       <div className={styles.deal_box}>
         <div className={styles.image_container}>
-          <img
-            src="https://codewithsadee.github.io/anon-ecommerce-website/assets/images/products/shampoo.jpg"
-            alt="asdf"
-          />
+          <img src={imageOne} alt={title} />
         </div>
         <div className={styles.content}>
           <div className={styles.ratings}>
@@ -25,9 +48,11 @@ const SingleProductPage = () => {
             amet consectetur Lorem ipsum dolo asdf as asdf asdf asasasdfr
           </p>
           <p className={styles.prices}>
-            $150.00 <span> $180.00 </span>
+            ${newPrice}.00 <span> ${oldPrice}.00 </span>
           </p>
-          <button onClick={() => console.log("good lock")}>ADD TO CART</button>
+          <button onClick={() => dispatch(addToCart(product))}>
+            ADD TO CART
+          </button>
           <div className={styles.count_sold}>
             <p>
               <span>already sold</span> :20

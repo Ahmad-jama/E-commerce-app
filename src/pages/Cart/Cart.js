@@ -8,7 +8,7 @@ import {
   incressQuantity,
   decressQuantity,
   getTotal,
-} from "../../features/cart";
+} from "../../features/cartSlice";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
@@ -62,18 +62,18 @@ const Cart = () => {
                 <div className={styles.quantity}>
                   <button
                     onClick={() => {
-                      dispatch(incressQuantity(product));
-                    }}
-                  >
-                    <AiOutlinePlus />
-                  </button>{" "}
-                  <p>{quantity}</p>{" "}
-                  <button
-                    onClick={() => {
                       dispatch(decressQuantity(product));
                     }}
                   >
                     <AiOutlineMinus />
+                  </button>{" "}
+                  <p>{quantity}</p>{" "}
+                  <button
+                    onClick={() => {
+                      dispatch(incressQuantity(product));
+                    }}
+                  >
+                    <AiOutlinePlus />
                   </button>{" "}
                 </div>
                 <div>${newPrice * quantity} </div>

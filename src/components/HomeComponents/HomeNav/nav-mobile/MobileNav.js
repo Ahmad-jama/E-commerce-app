@@ -1,6 +1,6 @@
 import React from "react";
 import { IoMdMenu } from "react-icons/io";
-import { IoHomeOutline, IoBagHandleOutline } from "react-icons/io5";
+import { IoBagHandleOutline, IoEyeOutline } from "react-icons/io5";
 import { AiOutlineAppstore } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import styles from "./mobile.module.css";
@@ -17,9 +17,9 @@ const MobileNav = () => {
         <IoMdMenu onClick={() => dispatch(showNavSidebar())} />
       </button>
 
-      <button>
-        <IoHomeOutline />
-      </button>
+      <Link to={"/allproduct"} className={styles.bag}>
+        <IoEyeOutline />
+      </Link>
 
       <button onClick={() => dispatch(showCategorySidebar())}>
         <AiOutlineAppstore />

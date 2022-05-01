@@ -19,6 +19,8 @@
   grid-template-columns: repeat(auto-fit, minmax(213px, 1fr));
   gap: 1rem;
   flex: 7.5;
+  position: relative;
+  padding-bottom: 4rem;
 }
 
 .right {

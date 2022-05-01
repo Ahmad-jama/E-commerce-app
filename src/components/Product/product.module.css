@@ -4,6 +4,8 @@
   overflow: hidden;
   transition: box-shadow 0.2s ease-in-out;
   position: relative;
+  max-width: 282px;
+  max-height: 393px;
 }
 
 .product:hover {

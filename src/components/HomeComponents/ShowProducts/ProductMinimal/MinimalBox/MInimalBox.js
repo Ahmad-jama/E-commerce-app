@@ -6,16 +6,16 @@ const MInimalBox = ({ title, productsData }) => {
     <div className={styles.box_showcase}>
       <h2>{title}</h2>
       {productsData.map((product) => {
-        const { id, name, category, oldPrice, newPrice, image } = product;
+        const { id, title, category, oldPrice, newPrice, imageOne } = product;
 
         return (
           <div key={id}>
-            <Link to={"/"} className={styles.box}>
+            <Link to={`/product/${id}`} className={styles.box}>
               <div>
-                <img src={image} alt="" />
+                <img src={imageOne} alt={title} />
               </div>
               <div>
-                <h3>{name}</h3>
+                <h3>{title}</h3>
                 <p>{category}</p>
                 <p>
                   {oldPrice} <span>{newPrice}</span>

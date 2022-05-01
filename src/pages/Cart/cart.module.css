@@ -51,7 +51,7 @@
 .quantity {
   display: flex;
   align-items: center;
-  height: 30px;
+  height: 31px;
   overflow: hidden;
 }
 
