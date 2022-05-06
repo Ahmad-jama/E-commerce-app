@@ -12,3 +12,9 @@
   grid-template-columns: repeat(auto-fit, minmax(213px, 1fr));
   gap: 1rem;
 }
+
+@media (max-width: 480px) {
+  .products_container {
+    place-items: center;
+  }
+}

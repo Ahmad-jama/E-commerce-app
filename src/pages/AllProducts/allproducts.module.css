@@ -25,6 +25,11 @@
   position: relative;
   padding-bottom: 4rem;
 }
+@media (max-width: 480px) {
+  .left {
+    place-items: center;
+  }
+}
 
 .right {
   flex: 2.5;
