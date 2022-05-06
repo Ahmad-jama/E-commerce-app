@@ -7,7 +7,7 @@ import styles from "./mobile.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { showNavSidebar } from "../../../../features/navSidebar";
 import { showCategorySidebar } from "../../../../features/categorySidebar";
-
+import { getFilterdProduct } from "../../../../features/searchSllice";
 const MobileNav = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
   const dispatch = useDispatch();
@@ -17,7 +17,13 @@ const MobileNav = () => {
         <IoMdMenu onClick={() => dispatch(showNavSidebar())} />
       </button>
 
-      <Link to={"/allproduct"} className={styles.bag}>
+      <Link
+        onClick={() => {
+          dispatch(getFilterdProduct(""));
+        }}
+        to={"/allproduct"}
+        className={styles.bag}
+      >
         <IoEyeOutline />
       </Link>
 

@@ -54,7 +54,12 @@ const Nav = () => {
               <IoBagHandleOutline />
               <span> {cartItems.length || 0} </span>
             </Link>
-            <Link to={"/allproduct"}>
+            <Link
+              onClick={() => {
+                dispatch(getFilterdProduct(search));
+              }}
+              to={"/allproduct"}
+            >
               <IoEyeOutline />
             </Link>
           </ul>

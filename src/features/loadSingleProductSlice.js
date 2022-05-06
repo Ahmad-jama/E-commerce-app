@@ -31,7 +31,6 @@ export const loadProductSlice = createSlice({
     [getSingleProduct.fulfilled]: (state, action) => {
       state.loading = false;
       state.product = action.payload;
-      console.log(state.product);
     },
     [getSingleProduct.rejected]: (state, action) => {
       state.loading = false;

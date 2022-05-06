@@ -6,7 +6,6 @@ const initialState = {
   products: [],
 };
 const productRef = collection(db, "products");
-console.log(collection);
 export const getAllProducts = createAsyncThunk(
   "products/fetchProducts",
   async () => {
