@@ -19,9 +19,12 @@ function App() {
 
   const dispatch = useDispatch();
 
-  setTimeout(() => {
-    dispatch(showModal());
-  }, 3000);
+  useEffect(() => {
+    setTimeout(() => {
+      dispatch(showModal());
+    }, 3000);
+  }, []);
+
   return (
     <div className="app">
       <ToastContainer />

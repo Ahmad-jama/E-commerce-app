@@ -4,7 +4,6 @@ import Product from "../../../components/Product/Product";
 
 const DisplayProduct = () => {
   const { filteredProducts } = useSelector((store) => store.search);
-  console.log(filteredProducts);
   if (filteredProducts == false) {
     return (
       <h1 style={{ display: "grid", placeItems: "center" }}>

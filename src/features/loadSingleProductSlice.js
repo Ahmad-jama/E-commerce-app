@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-
+import { getDoc, doc } from "@firebase/firestore";
+import { db } from "../firebase";
 const initialState = {
   loading: false,
   product: {},
@@ -8,9 +9,13 @@ const initialState = {
 export const getSingleProduct = createAsyncThunk(
   "product/fetchSingleProduct",
   async (id) => {
-    const response = await fetch(`http://localhost:8000/allproducts/${id}`);
-    const data = await response.json();
-    return data;
+    const productRef = doc(db, "products", id);
+
+    const product = await getDoc(productRef, doc.id);
+    return {
+      ...product.data(),
+      id,
+    };
   }
 );
 
@@ -26,6 +31,7 @@ export const loadProductSlice = createSlice({
     [getSingleProduct.fulfilled]: (state, action) => {
       state.loading = false;
       state.product = action.payload;
+      console.log(state.product);
     },
     [getSingleProduct.rejected]: (state, action) => {
       state.loading = false;

@@ -14,7 +14,7 @@ const SingleProductPage = () => {
     if (id) {
       dispatch(getSingleProduct(id));
     } else {
-      dispatch(getSingleProduct(1));
+      dispatch(getSingleProduct("1"));
     }
   }, []);
 
@@ -42,7 +42,7 @@ const SingleProductPage = () => {
             <AiOutlineStar color="#f6a355" />
             <AiOutlineStar color="#f6a355" />
           </div>
-          <h3> SHAMPOO, CONDITIONER & FACEWASH PACKS</h3>
+          <h3> {title}</h3>
           <p className={styles.description}>
             Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor dolor sit
             amet consectetur Lorem ipsum dolo asdf as asdf asdf asasasdfr

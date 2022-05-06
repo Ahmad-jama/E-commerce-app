@@ -22,7 +22,7 @@ const Nav = () => {
           </ul>
 
           <ul>
-            <li>night</li>
+            <li>E-shop</li>
           </ul>
         </div>
       </nav>

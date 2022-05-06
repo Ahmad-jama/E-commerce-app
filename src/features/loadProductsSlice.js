@@ -1,16 +1,17 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-
+import { db } from "./../firebase";
+import { getDocs, collection } from "@firebase/firestore";
 const initialState = {
   loading: false,
   products: [],
 };
-
+const productRef = collection(db, "products");
+console.log(collection);
 export const getAllProducts = createAsyncThunk(
   "products/fetchProducts",
   async () => {
-    const response = await fetch("http://localhost:8000/allproducts");
-    const data = await response.json();
-    return data;
+    const data = await getDocs(productRef);
+    return data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
   }
 );
 
