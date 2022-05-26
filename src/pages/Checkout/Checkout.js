@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./checkout.module.css";
 import { useSelector } from "react-redux";
 import Nav from "../../components/Nav/Nav";
+import { toast } from "react-toastify";
+
 const Checkout = () => {
   const products = useSelector((store) => store.cart);
   return (
@@ -88,7 +90,22 @@ const Checkout = () => {
                 <p>${products.totalAmount + 30}.00 </p>
               </li>
             </ul>
-            <button>PLACE ORDER</button>
+            <button
+              onClick={() =>
+                toast(`  Thanks for ordring `, {
+                  position: "bottom-center",
+                  autoClose: 5000,
+                  hideProgressBar: true,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  theme: "dark",
+                  progress: undefined,
+                })
+              }
+            >
+              PLACE ORDER
+            </button>
           </div>
         </div>
       </div>

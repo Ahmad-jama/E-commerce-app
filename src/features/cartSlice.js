@@ -38,7 +38,7 @@ export const cartSlice = createSlice({
       const newArray = state.cartItems.filter(
         (items) => items.id !== actions.payload.id
       );
-      toast.error(`${actions.payload.title.slice(0, 14)} removed from cart`, {
+      toast.error(`${actions.payload.title.slice(0, 14)} removed from cart `, {
         position: "bottom-right",
         autoClose: 3000,
       });
